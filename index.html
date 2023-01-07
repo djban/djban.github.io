@@ -1,0 +1,253 @@
+<!-- Template designed by Kevin Cui, and maintained by me, David Ban. Last updated Jan 6, 2023 -->
+<!DOCTYPE html>
+<html lang='en'>
+   <head>
+      <meta charset='UTF-8'>
+      <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+      <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+      <title>David Ban</title>
+      <meta name="author" content="David Ban">
+      <link rel='stylesheet' href='../style.css' />
+      <link rel='stylesheet' href='../mobile.css' />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+   </head>
+   <body id='body'>
+      <nav class='title fixed-elements'>
+         <div class='container'>
+            <a href='#' ><i class='fa fa-user fa-3x nav-icon small-icon' aria-hidden=true></i>
+            <div class='overlay'>
+               <div class='text'><b class='nav-text t'>About Me</b></div>
+            </div></a>
+         </div>
+         <div class='container'>
+            <a href='#resume'><i class='fa fa-file-text fa-3x nav-icon small-icon' aria-hidden=true></i>
+            <div class='overlay'>
+               <div class='text'><b class='nav-text t'>Resume</b></div>
+            </div></a>
+         </div>
+         <div class='container'>
+            <a href='#portfolio'><i class='fa fa-code-fork fa-3x nav-icon small-icon' aria-hidden=true></i>
+            <div class='overlay'>
+               <div class='text'><b class='nav-text t'>Portfolio</b></div>
+            </div></a>
+         </div>
+         <div class='container'>
+            <a href='#resources'><i class='fa fa-bookmark fa-3x nav-icon small-icon' aria-hidden=true></i>
+            <div class='overlay'>
+               <div class='text'><b class='nav-text t'>Papers and Presentations</b></div>
+            </div></a>
+         </div>
+      </nav>
+      <nav class='title fixed-elements-right'>
+         <script src='../src/js/dark.js'></script>
+         <div class='dark-mode show' onclick='toggleDark()' onmouseover="" style="cursor: pointer;"><i class='fa fa-moon-o fa-3x nav-icon'></i>
+         <div class='overlay'>
+            <div class='text nav-text t'><b>Dark Mode</b></div>
+         </div></div>
+         <div class='light-mode' onclick='toggleDark()' onmouseover="" style="cursor: pointer;"><i class='fa fa-sun-o fa-3x nav-icon'></i>
+         <div class='overlay'>
+            <div class='text nav-text t'><b>Light Mode</b></div>
+         </div></div>
+      </div>
+      </nav>
+      <div class='view'>
+         <div class='main'>
+            <div class='mainhead'>
+               <div class='descrip' id='titlename'>
+                  <h3 class='bigtitle t'>David Ban</h3>
+                  <br>
+                  <div class='center' style="font-size: 36px;">
+                     <a href='https://github.com/djban' title='GitHub' target='_blank'><i class='fa fa-github top-icon' aria-hidden=true></i></a>
+                     <a href='https://www.linkedin.com/in/djban/' title='LinkedIn' target='_blank'><i class='fa fa-linkedin top-icon' aria-hidden=true></i></a>
+                     <a href='mailto:djban@berkeley.edu' title='Email' target='_blank' class='t'><i class='fa fa-at top-icon' aria-hidden=true></i></a>
+                  </div>
+               </div>
+               <section id='about'>
+                  <div class="lightback">
+                     <h2 class='indescrip t'>Software Engineer / Student</h2>
+                     <br>
+                     <br>
+                     <div class='res-segment centered'>
+                        <div>
+                           <img class='portrait' src='../src/img/db_cat.jpg' style="height: 500px;;"></img>
+                           <img class='portrait' src='../src/img/db-vinegar.png' style="height: 500px;;"></img>
+                           <img class='portrait' src='../src/img/db-fencing.jpg' style="height: 500px;;"></img>
+                        </div>
+                        <script>
+                           var myIndex = 0;
+                           carousel();
+                           
+                           function carousel() {
+                             var i;
+                             var x = document.getElementsByClassName("portrait");
+                             for (i = 0; i < x.length; i++) {
+                               x[i].style.display = "none";  
+                             }
+                             myIndex++;
+                             if (myIndex > x.length) {myIndex = 1}    
+                             x[myIndex-1].style.display = "block";  
+                             setTimeout(carousel, 15000); // Change image every 15 seconds
+                           }
+                           </script>
+                     </div>
+                     <div class='res-segment centered'>
+                        <div id='less-button' class='text-module t'>Less</div>
+                        <div id='default-button' class='text-module t'>Default</div>
+                        <div id='more-button' class='text-module t'>More</div>
+                     </div>
+                     <br>
+                     <div class=''></div>
+                     <div id='less' class='subdescrip'>Hi! I'm David!</div>
+                     <div id='less' class='subdescrip'>I'm a B.A. Computer Science Major @ UC Berkeley enjoys rhythm games and music.</div>
+                     <div id='less' class='subdescrip'>Interned at Enable Medicine as a Full Stack Developer in 2022, maintain officer positions in several communities around campus, excelling in my coursework with a CGPA of over 3.75, and am always looking for new hobbies and challenges. </div> 
+                     <div id='default' class='subdescrip'>Heya! I am David, a software developer and majoring in Computer Science Major at UC Berkeley.</div>
+                     <div id='default' class='subdescrip'>As a leader and developer in many communities, I lead by example with perseverance and approaching opportunities with unique perspectives.</div>
+                     <div id='default' class='subdescrip'>I interned at Enable Medicine as a Full Stack Developer in 2022, where I held responsibilities in developing full-stack and delivering production-level applications. Academically, I am committed to my education and excel in my studies with a CGPA of over 3.75.</div>
+                     <div id='default' class='subdescrip'>In addition to school and work, I constantly seek opportunities to expand my knowledge. I have attended numerous hackathons and have organized several math tournaments. I am also a pianist for Berkeley’s Intermission Orchestra and an Officer for the Dance Games @ Berkeley.</div>
+                     <div id='more' class='subdescrip'>Hello! I am  David, a software engineer and pursuing a computer science degree at the University of California, Berkeley.</div>
+                     <div id='more' class='subdescrip'>As a leader and developer in many communities, I lead by example with perseverance and approaching opportunities with unique perspectives. I enjoy working with new and unfamiliar environments, and thrive under pressure.</div>
+                     <div id='more' class='subdescrip'>I interned at Enable Medicine as a Full Stack Developer in 2022, where I held responsibilities in developing full-stack and delivering production-level applications. I proposed, created, and delivered novel applications in our workflow, conducted user testing, moderated new releases, and presented them to the company and CEO. Previously, I interned at Idaho National Lab, where my code has been applied to two research papers (see resources). Academically, I am committed to my education and excel in my studies with a CGPA of over 3.75. I enjoy taking courses such as Operating Systems, Efficient Algorithms, and Operating systems while still teaching and tutoring for classes, including Discrete Math and Probability.</div>
+                     <div id='more' class='subdescrip'>In addition to school and work, I constantly seek opportunities to expand my knowledge. I have attended numerous hackathons and have organized and wrote problems for several tournaments including <a href="https://bmt.berkeley.edu/">Berkeley Math Tournament</a>. I am also a pianist for Berkeley’s <a href="https://www.youtube.com/c/TheIntermissionOrchestraatBerkeley">Intermission Orchestra</a>, and a founding officer for the Dance Games @ Berkeley. You can see our website which I helped build <a href="https://dancegames.berkeley.edu/">here</a>.</div>
+                     <br><br>
+                     <script src='../src/js/profile.js'></script>
+                  </div>
+               </section>
+               <section id='resume'>
+                  <div class='lightback'>
+                     <h2 class='indescrip t'>Resume</h2>
+                     <embed class="pdf" src="../src/David_Ban_Resume.pdf" />
+                     <div class='res-segment centered'>
+                        <div class='download-descrip centered t'>Download</div>
+                        <a id="file" target="_blank" href="../src/David_Ban_Resume.pdf" download="David_Ban_Resume" target="_blank" title="My Resume (PDF)"><i class='fa fa-file-pdf-o top-icon' aria-hidden=true></i> <span class='t'>PDF Download</span></a>	
+                        <br>
+                     </div>
+                     <br>
+                  </div>
+               </section>
+               </section>
+               <section id="portfolio">
+                  <div class="lightback">
+                     <h2 class='indescrip t'>Portfolio</h2>
+                     <br>
+                     <!-- <p class="centered">
+                        <a href="https://github.com/kevinjycui/DesmosBezierRenderer" target="_blank"><img class="portfolio-pin" src="https://github-readme-stats.vercel.app/api/pin/?username=kevinjycui&repo=DesmosBezierRenderer" /></a>
+                        <a href="https://github.com/kevinjycui/bad-apple" target="_blank"><img class="portfolio-pin" src="https://github-readme-stats.vercel.app/api/pin/?username=kevinjycui&repo=bad-apple" /></a>
+                        <a href="https://github.com/kevinjycui/DKBongoToKey" target="_blank"><img class="portfolio-pin" src="https://github-readme-stats.vercel.app/api/pin/?username=kevinjycui&repo=DKBongoToKey" /></a>
+                        <a href="https://github.com/kevinjycui/Practice-Bot" target="_blank"><img class="portfolio-pin" src="https://github-readme-stats.vercel.app/api/pin/?username=kevinjycui&repo=Practice-Bot" /></a>
+                        <a href="https://github.com/kevinjycui/CarpAndCabbage" target="_blank"><img class="portfolio-pin" src="https://github-readme-stats.vercel.app/api/pin/?username=kevinjycui&repo=CarpAndCabbage" /></a>
+                        <a href="https://github.com/kevinjycui/CortexPlugin" target="_blank"><img class="portfolio-pin" src="https://github-readme-stats.vercel.app/api/pin/?username=kevinjycui&repo=CortexPlugin" /></a>
+                        <a href="https://github.com/kevinjycui/advent-of-code-2020" target="_blank"><img class="portfolio-pin" src="https://github-readme-stats.vercel.app/api/pin/?username=kevinjycui&repo=advent-of-code-2020" /></a>
+                        <a href="https://github.com/kevinjycui/Neurologue" target="_blank"><img class="portfolio-pin" src="https://github-readme-stats.vercel.app/api/pin/?username=kevinjycui&repo=Neurologue" /></a>
+                        <a href="https://github.com/kevinjycui/Competitive-Programming" target="_blank"><img class="portfolio-pin" src="https://github-readme-stats.vercel.app/api/pin/?username=kevinjycui&repo=Competitive-Programming" /></a>
+                        <a href="https://github.com/kevinjycui/advent-of-code-2019" target="_blank"><img class="portfolio-pin" src="https://github-readme-stats.vercel.app/api/pin/?username=kevinjycui&repo=advent-of-code-2019" /></a>
+                        <a href="https://github.com/kevinjycui/picoCTF-2019-writeup" target="_blank"><img class="portfolio-pin" src="https://github-readme-stats.vercel.app/api/pin/?username=kevinjycui&repo=picoCTF-2019-writeup" /></a>
+                        <a href="https://github.com/kevinjycui/hand-spoken-backend" target="_blank"><img class="portfolio-pin" src="https://github-readme-stats.vercel.app/api/pin/?username=kevinjycui&repo=hand-spoken-backend" /></a>
+                        <a href="https://github.com/kevinjycui/enferi" target="_blank"><img class="portfolio-pin" src="https://github-readme-stats.vercel.app/api/pin/?username=kevinjycui&repo=enferi" /></a>
+                        <a href="https://github.com/kevinjycui/human-anatomy-model" target="_blank"><img class="portfolio-pin" src="https://github-readme-stats.vercel.app/api/pin/?username=kevinjycui&repo=human-anatomy-model" /></a>
+                        <br><br>
+                        <samp>
+                           <a href="https://github.com/kevinjycui?tab=repositories&language=python" target="_blank"><img alt="Python" src="https://img.shields.io/badge/-Python-3572A5?style=flat-square&logo=Python&logoColor=white"></a>
+                           <a href="https://github.com/kevinjycui?tab=repositories&language=javascript" target="_blank"><img alt="Java" src="https://img.shields.io/badge/-Javascript-f1e05a?style=flat-square&logo=Javascript&logoColor=white"></a>
+                           <a href="https://github.com/kevinjycui?tab=repositories&language=c%2B%2B" target="_blank"><img alt="C++" src="https://img.shields.io/badge/-C%2B%2B-f34b7d?style=flat-square&logo=C%2B%2B&logoColor=white"></a>
+                           <a href="https://github.com/kevinjycui?tab=repositories&language=go" target="_blank"><img alt="Go" src="https://img.shields.io/badge/-Go-375eab?style=flat-square&logo=Go&logoColor=white"></a>
+                           <a href="https://github.com/kevinjycui?tab=repositories&language=java" target="_blank"><img alt="Java" src="https://img.shields.io/badge/-Java-b07219?style=flat-square&logo=Java&logoColor=white"></a>
+                           <a href="https://github.com/kevinjycui?tab=repositories&language=html" target="_blank"><img alt="HTML" src="https://img.shields.io/badge/-HTML-e34c26?style=flat-square&logo=HTML5&logoColor=white"></a>
+                        </samp>
+                     </p> -->
+                  
+
+                     <iframe width="420" height="236" src="https://www.youtube.com/embed/VRhXtyD5ew8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                     <iframe width="420" height="236" src="https://www.youtube.com/embed/VDP8vfPshj8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                     <iframe width="420" height="236" src="https://www.youtube.com/embed/XgoyqVRoywM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                  </div>
+                  <br>
+               </section>
+            </div>
+            </section>
+            <section id='resources'>
+            <div class='lightback'>
+               <h2 class='indescrip t'>Papers and Presentations</h2>
+               <br>
+               <script src='../src/js/popup-handler.js'></script>
+               <div id='resource-dir' class='res-segment'>
+                  <table id="resource-table">
+                     <tr>
+                        <th class='t'>Name</th>
+                        <th class='t'>Year</th>
+                        <th>URL</th>
+                     </tr>
+                     <tr>
+                        <td>'Experimental results of conductive inserts to reduce nuclear fuel temperature during nuclear volumetric heating' <div class='popup' onclick='togglePopup("pbwiki")'><i class='fa fa-info-circle'></i><span class='popuptext' id='pbwiki'>Paper discussing thermal conductivity of nuclear fuel rods</span></div></td>
+                        <td>2021</td>
+                        <td><a href='https://www.sciencedirect.com/science/article/pii/S0022311522006559' class='table-url' target='_blank'><span class='t'>Paper Link</span> <i class='fa fa-external-link'></i></a></td>
+                     </tr>
+                     <tr>
+                        <td>'Dry in-pile fracture test (DRIFT) for separate-effects validation of ceramic fuel fracture models'<div class='popup' onclick='togglePopup("aoc2019")'><i class='fa fa-info-circle'></i><span class='popuptext' id='aoc2019'>Paper discussing fractures of nuclear pellets during reactor heating</span></div></td>
+                        <td>2021</td>
+                        <td><a href='https://www.sciencedirect.com/science/article/abs/pii/S0022311522003026' class='table-url' target='_blank'><span class='t'>Paper Link</span> <i class='fa fa-external-link'></i></a></td>
+                     </tr>
+                     <tr>
+                        <td>Predicting Protein-Ligand Binding Using Deep Learning with Spatial Transformations <div class='popup' onclick='togglePopup("protein")'><i class='fa fa-info-circle'></i><span class='popuptext' id='protein'>Paper submitted to JSHS and ISEF</span></div></td>
+                        <td>2020</td>
+                        <td><a href='../src/Protein-Ligand-Binding-Paper.pdf' class='table-url' target='_blank'><span class='t'>Paper</span> <i class='fa fa-external-link'></i></a></td>
+                     </tr>
+                     <tr>
+                        <td>American Medical Informatics Association Presenter <div class='popup' onclick='togglePopup("aoc2020")'><i class='fa fa-info-circle'></i><span class='popuptext' id='aoc2020'>Presentation slides during the annual symposium</span></div></td>
+                        <td>2019</td>
+                        <td><a href='https://symposium2019.zerista.com/profile/member/2889609' class='table-url' target='_blank'><span class='t'>Presentation Slides</span> <i class='fa fa-external-link'></i></a></td>
+                     </tr>
+                     <!-- <tr class='gold-row'>
+                        <td>PicoCTF 2019 - <span class='t'>29th Canadian</span> <div class='popup' onclick='togglePopup("pico2019")'><i class='fa fa-info-circle'></i><span class='popuptext' id='pico2019'>Solutions and writeups for the picoCTF Cybersecurity Competition held by Carnegie Mellon University</span></div></td>
+                        <td>2019</td>
+                        <td><a href='https://github.com/kevinjycui/picoCTF-2019-writeup' class='table-url' target='_blank'><span class='t'>Solutions</span> <i class='fa fa-external-link'></i></a></td>
+                     </tr>
+                     <tr>
+                        <td>RBC VoiceHacks Rasa-Mycroft</td>
+                        <td>2019</td>
+                        <td><a href='https://mycroft.ai/blog/connecting-rasa-to-mycroft-a-guide/' class='table-url' target='_blank'><span class='t'>Blog</span> <i class='fa fa-external-link'></i></a></td>
+                     </tr>
+                     <tr>
+                        <td>EEG Cursor Controller w/ Emotiv</td>
+                        <td>2019</td>
+                        <td><a href='https://medium.com/@kevinjycui/of-mice-and-mind-creating-a-simple-eeg-cursor-control-application-7fcdad703d2f' class='table-url' target='_blank'><span class='t'>Blog</span> <i class='fa fa-external-link'></i></a></td>
+                     </tr>
+                     <tr>
+                        <td>ICS3U1</td>
+                        <td>2018-2019</td>
+                        <td><a href='https://github.com/kevinjycui/ICS3U1' class='table-url' target='_blank'>Repository <i class='fa fa-external-link'></i></a></td>
+                     </tr>
+                     <tr>
+                        <td><span class='t'>Competitive Programming</span> <div class='popup' onclick='togglePopup("cp-repo")'><i class='fa fa-info-circle'></i><span class='popuptext' id='cp-repo'>All my AC solutions to competitive programming problems (DMOJ, WCIPEG, Codeforces, etc.), 2017-2020</span></div></td>
+                        <td>2017-2020</td>
+                        <td><a href='https://github.com/kevinjycui/Competitive-Programming' class='table-url' target='_blank'>Repository <i class='fa fa-external-link'></i></a></td>
+                     </tr> -->
+                  </table>
+               </div>
+               <br>
+            </div>
+            </section>
+         </div>
+         <footer class='foot' id='contact'>
+            <a class='legal t'> David Ban | Berkeley, California</a>
+            <br><br>
+            <a class='legal email' href='mailto:djban@berkeley.edu' target='_blank'>djban@berkeley.edu</a>
+            <br><br>
+            <a href='https://github.com/djban' title='GitHub' target='_blank'><i class='fa fa-github' aria-hidden=true style='margin: 1%; font-size: 36px; color: white'></i></a>
+            <a href='https://www.linkedin.com/in/djban/' title='LinkedIn' target='_blank'><i class='fa fa-linkedin' aria-hidden=true style='margin: 1%; font-size: 36px; color: white'></i></a>
+            <br>
+
+            <br><br><br>
+         </footer>
+      </div>
+      <div class="loader-wrapper" id="load">
+         <span class="loader"><span class="loader-inner"></span></span>
+      </div>
+      <script>
+         window.onload = function() {
+            window.scrollTo(0, 0);
+            document.getElementById("load").className += " loaded";
+         }
+      </script>
+   </body>
+</html>
