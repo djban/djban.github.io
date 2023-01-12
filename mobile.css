@@ -31,6 +31,8 @@
 	}
     .foot {
 		margin: 0;
+		width: 100%;
+		position:sticky;
 	}
 	.smlogo {
 		height: 12%;
@@ -130,5 +132,8 @@
 	.fixed-elements-right {
 		display: none;
 	}
-
+	.res-segment {
+		padding: 0 10% 0 10%;
+		width: 75%;
+	}
 }
