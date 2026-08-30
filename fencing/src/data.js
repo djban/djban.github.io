@@ -1,39 +1,19 @@
 export const fencingActions = [
   {
     source: 'Hidan',
-    responses: [
-      'Cut 1',
-      'Parry 1',
-      'Thrusts',
-      null,
-    ],
+    responses: ['Cut 1', 'Parry 1', 'Thrusts', null],
   },
   {
     source: 'Hidan',
-    responses: [
-      'Cut 1',
-      'Parry 1',
-      'False Edge Cut Under Wrist',
-      null,
-    ],
+    responses: ['Cut 1', 'Parry 1', 'False Edge Cut Under Wrist', null],
   },
   {
     source: 'Hidan',
-    responses: [
-      'Cut 1',
-      'Parry 1',
-      'False Edge Cut Over Wrist',
-      null,
-    ],
+    responses: ['Cut 1', 'Parry 1', 'False Edge Cut Over Wrist', null],
   },
   {
     source: 'Mitchell',
-    responses: [
-      'Cut 1',
-      'Parry 1',
-      'Moulinet Cut 2 to Forearm',
-      null,
-    ],
+    responses: ['Cut 1', 'Parry 1', 'Moulinet Cut 2 to Forearm', null],
   },
   {
     source: 'Hidan',
@@ -55,12 +35,7 @@ export const fencingActions = [
   },
   {
     source: 'Hidan',
-    responses: [
-      'Cut 1',
-      'Parry 1',
-      null,
-      'Thrusts over the Parry to Neck',
-    ],
+    responses: ['Cut 1', 'Parry 1', null, 'Thrusts over the Parry to Neck'],
   },
   {
     source: 'Mitchell',
@@ -83,48 +58,23 @@ export const fencingActions = [
 
   {
     source: 'Hidan',
-    responses: [
-      'Cut 2',
-      'Parry 2',
-      'Thrusts',
-      null,
-    ],
+    responses: ['Cut 2', 'Parry 2', 'Thrusts', null],
   },
   {
     source: 'Hidan',
-    responses: [
-      'Cut 2',
-      'Parry 2',
-      'False Edge cut over wrist',
-      null,
-    ],
+    responses: ['Cut 2', 'Parry 2', 'False Edge cut over wrist', null],
   },
   {
     source: 'Hidan',
-    responses: [
-      'Cut 2',
-      'Parry 2',
-      'False Edge cut Under wrist',
-      null,
-    ],
+    responses: ['Cut 2', 'Parry 2', 'False Edge cut Under wrist', null],
   },
   {
     source: 'Hidan',
-    responses: [
-      'Cut 2',
-      'Parry 2',
-      'Direct Cut 1 to forearm',
-      null,
-    ],
+    responses: ['Cut 2', 'Parry 2', 'Direct Cut 1 to forearm', null],
   },
   {
     source: 'Hidan',
-    responses: [
-      'Cut 2',
-      'Parry 2',
-      null,
-      'Thrusts in opposition and Retreats',
-    ],
+    responses: ['Cut 2', 'Parry 2', null, 'Thrusts in opposition and Retreats'],
   },
   {
     source: 'Hidan',
@@ -147,31 +97,16 @@ export const fencingActions = [
 
   {
     source: 'Hidan',
-    responses: [
-      'Cut 1,2',
-      'Parries 1,2',
-      'False Edge cut Over wrist',
-      null,
-    ],
+    responses: ['Cut 1,2', 'Parries 1,2', 'False Edge cut Over wrist', null],
   },
 
   {
     source: 'Hidan',
-    responses: [
-      'Cut 3',
-      'Parry 3',
-      'Thrusts',
-      null,
-    ],
+    responses: ['Cut 3', 'Parry 3', 'Thrusts', null],
   },
   {
     source: 'Hidan',
-    responses: [
-      'Cut 3',
-      'Parry 3',
-      'False Edge cut Under wrist',
-      null,
-    ],
+    responses: ['Cut 3', 'Parry 3', 'False Edge cut Under wrist', null],
   },
   {
     source: 'Mitchell',
@@ -194,21 +129,11 @@ export const fencingActions = [
 
   {
     source: 'Hidan',
-    responses: [
-      'Cut 4',
-      'Parry 4',
-      'Thrusts',
-      null,
-    ],
+    responses: ['Cut 4', 'Parry 4', 'Thrusts', null],
   },
   {
     source: 'Hidan',
-    responses: [
-      'Cut 4',
-      'Parry 4',
-      'False Edge cut Under wrist',
-      null,
-    ],
+    responses: ['Cut 4', 'Parry 4', 'False Edge cut Under wrist', null],
   },
   {
     source: 'Mitchell',
