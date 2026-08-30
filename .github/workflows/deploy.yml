@@ -2,13 +2,12 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
   workflow_dispatch:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 concurrency:
   group: pages
@@ -17,6 +16,12 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -34,49 +39,26 @@ jobs:
         run: npm run build
 
       - name: Configure Pages
-        uses: actions/configure-pages@v5
-        with:
-          static_site_generator: html
+        uses: actions/configure-pages@v6
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: .
 
-      - name: Deploy
-        id: deployment
-        uses: actions/deploy-pages@v4
-
-  # Preview deployments (a.k.a. Pages previews) for pull requests —
-  # optional; only runs when the repo has valid pages-build-deployment secret.
-  preview:
+  deploy:
     runs-on: ubuntu-latest
-    if: github.event_name == 'pull_request'
+    needs: build
+
     permissions:
-      contents: read
       pages: write
       id-token: write
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
     steps:
-      - name: Checkout PR
-        uses: actions/checkout@v4
-        with:
-          ref: ${{ github.event.pull_request.head.ref }}
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: 22
-          cache: npm
-      - name: Install dependencies
-        run: npm ci
-      - name: Build & validate site
-        run: npm run build
-      - name: Configure Pages
-        uses: actions/configure-pages@v5
-        with:
-          static_site_generator: html
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: .
-      - name: Deploy (preview)
+      - name: Deploy to GitHub Pages
+        id: deployment
         uses: actions/deploy-pages@v4
