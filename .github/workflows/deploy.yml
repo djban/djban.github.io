@@ -33,25 +33,21 @@ jobs:
           cache: npm
 
       # -------------------------------------------------
-      # Existing personal website
+      # Install dependencies
       # -------------------------------------------------
 
       - name: Install main site dependencies
         run: npm ci
 
-      - name: Build & validate main site
-        run: npm run build
-
-      # -------------------------------------------------
-      # React fencing website
-      # -------------------------------------------------
-
       - name: Install fencing dependencies
         working-directory: fencing
         run: npm ci
 
-      - name: Build fencing website
-        working-directory: fencing
+      # -------------------------------------------------
+      # Build and validate
+      # -------------------------------------------------
+
+      - name: Build and validate
         run: npm run build
 
       # -------------------------------------------------
