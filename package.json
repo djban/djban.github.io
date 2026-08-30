@@ -1,0 +1,20 @@
+{
+  "name": "djban-github-io",
+  "version": "1.0.0",
+  "description": "Personal website of David Ban — static site with Node-based build validation and GitHub Pages deployment.",
+  "private": true,
+  "scripts": {
+    "build": "node tools/build.js",
+    "check": "node tools/build.js",
+    "serve": "node tools/serve.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "static-site",
+    "github-pages",
+    "personal-website"
+  ],
+  "license": "UNLICENSED"
+}
