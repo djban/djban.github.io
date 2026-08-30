@@ -32,19 +32,58 @@ jobs:
           node-version: 22
           cache: npm
 
-      - name: Install dependencies
+      # -------------------------------------------------
+      # Existing personal website
+      # -------------------------------------------------
+
+      - name: Install main site dependencies
         run: npm ci
 
-      - name: Build & validate site
+      - name: Build & validate main site
         run: npm run build
+
+      # -------------------------------------------------
+      # React fencing website
+      # -------------------------------------------------
+
+      - name: Install fencing dependencies
+        working-directory: fencing
+        run: npm ci
+
+      - name: Build fencing website
+        working-directory: fencing
+        run: npm run build
+
+      # -------------------------------------------------
+      # Assemble GitHub Pages artifact
+      # -------------------------------------------------
+
+      - name: Prepare Pages site
+        run: |
+          rm -rf _site
+          mkdir -p _site
+
+          # Copy existing static website.
+          cp -a index.html _site/
+          cp -a credit.html _site/
+          cp -a hobbies.html _site/
+          cp -a wuwaTeardown.html _site/
+          cp -a wuwaTeardown.md _site/
+          cp -a mobile.css _site/
+          cp -a style.css _site/
+          cp -a WuWafiles _site/
+
+          # Copy fencing React build.
+          mkdir -p _site/fencing
+          cp -a fencing/dist/. _site/fencing/
 
       - name: Configure Pages
         uses: actions/configure-pages@v6
 
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v4
         with:
-          path: .
+          path: _site
 
   deploy:
     runs-on: ubuntu-latest
