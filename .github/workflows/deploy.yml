@@ -67,11 +67,15 @@ jobs:
           cp -a wuwaTeardown.md _site/
           cp -a mobile.css _site/
           cp -a style.css _site/
+          cp -a src _site/
           cp -a WuWafiles _site/
 
           # Copy fencing React build.
           mkdir -p _site/fencing
           cp -a fencing/dist/. _site/fencing/
+
+      - name: Validate Pages artifact
+        run: node tools/build.js _site
 
       - name: Configure Pages
         uses: actions/configure-pages@v6
