@@ -29,6 +29,7 @@ const fs = require('fs')
 const path = require('path')
 
 const ROOT = path.resolve(__dirname, '..')
+const SITE_ROOT = process.argv[2] ? path.resolve(process.argv[2]) : ROOT
 
 const URL_ATTRS = new Set([
   'href',
@@ -260,12 +261,12 @@ function main() {
    */
 
   const rootHtmlFiles =
-    walkHtmlFiles(ROOT)
+    walkHtmlFiles(SITE_ROOT)
 
   for (const htmlFile of rootHtmlFiles) {
     validateHtmlFile(
       htmlFile,
-      ROOT,
+      SITE_ROOT,
       '/',
       errors,
     )
@@ -278,11 +279,9 @@ function main() {
    */
 
   const fencingDist =
-    path.join(
-      ROOT,
-      'fencing',
-      'dist',
-    )
+    process.argv[2]
+      ? path.join(SITE_ROOT, 'fencing')
+      : path.join(ROOT, 'fencing', 'dist')
 
   const fencingIndex =
     path.join(
